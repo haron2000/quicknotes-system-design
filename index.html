@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickNotes System Design</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="api.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>QuickNotes</h1>
+        <p>Manage your notes with the QuickNotes API.</p>
+    </header>
+
+<main>
+    <section aria-labelledby="load-heading">
+        <h2 id="load-heading">Your Notes</h2>
+
+        <button id="load-btn" type="button">Load notes</button>
+
+        <p id="status" aria-live="polite"></p>
+
+        <ul id="notes-list"></ul>
+    </section>
+
+    <section aria-labelledby="create-heading">
+        <h2 id="create-heading">Create a Note</h2>
+
+        <form id="note-form">
+            <div>
+                <label for="title-input">Title</label>
+                <input
+                    type="text"
+                    id="title-input"
+                    name="title"
+                    maxlength="100"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="body-input">Note</label>
+                <textarea
+                    id="body-input"
+                    name="body"
+                    rows="6"
+                ></textarea>
+            </div>
+
+            <button id="submit-btn" type="submit">Create note</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 QuickNotes</p>
+</footer>
+
+</body>
+</html>
